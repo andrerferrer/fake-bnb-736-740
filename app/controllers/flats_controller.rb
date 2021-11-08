@@ -14,7 +14,7 @@ class FlatsController < ApplicationController
   private
 
   def fetch_the_api_for_flats
-    url = "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/flats.json"
-    JSON.parse(URI.open(url).read)
+    url = 'https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/flats.json'
+    JSON.parse(URI.parse(url).open.read)
   end
 end
